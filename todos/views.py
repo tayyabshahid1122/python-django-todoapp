@@ -1,10 +1,15 @@
-
+from django.http import HttpResponse
 from todos.serializers import TodoSerializer
 from todos.models import Todos
 from rest_framework import generics
+
 # from rest_framework_bulk import BulkDestroyAPIView
 
 # TODO: Add delete all todos, add url to responses, enable CORS properly
+
+
+def print(request):
+      return HttpResponse("Hello World!")
 
 class TodoList(generics.ListCreateAPIView):
     queryset = Todos.objects.all()
