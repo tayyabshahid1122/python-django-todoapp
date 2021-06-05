@@ -10,6 +10,7 @@ postgres:
   environment:
     POSTGRES_USER: todoapp
     POSTGRES_DB: todos
+    POSTGRES_HOST_AUTH_METHOD: "trust"
 codeship-heroku-deployment:
   image: codeship/heroku-deployment
   encrypted_env_file: deployment.env.encrypted
